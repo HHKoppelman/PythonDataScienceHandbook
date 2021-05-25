@@ -28,11 +28,11 @@ data.asfreq('D', method='ffill').plot(ax=ax[1], style='--o')
 (data.asfreq('D', method='bfill')/2 + data.asfreq('D', method='ffill')/2).plot(ax=ax[1], style='-o')
 ax[1].legend(["back-fill", "forward-fill", 'mean f/b fill']);
 ```
-![](Numpy%20Python%20data%20types/unknown.png)
+![](Pands%20Time%20Series%20-%20Finance/unknown.png)
 
 Shifting the data: `shift` vs `tshift`
 The former shifts the data and the latter shifts the time index
-![](Numpy%20Python%20data%20types/8C4D991A-6A4A-4A3F-A41E-2647958265B4.png)
+![](Pands%20Time%20Series%20-%20Finance/8C4D991A-6A4A-4A3F-A41E-2647958265B4.png)
 
 Using shifts to calculate the yearly ROI
 ```python
@@ -42,7 +42,7 @@ plt.ylabel('% Return on Investment');
 # Is this really the ROI though?
 # Fine, the one-year ROI for investing in Apple stock.
 ```
-![](Numpy%20Python%20data%20types/unknown%202.png)
+![](Pands%20Time%20Series%20-%20Finance/unknown%202.png)
 -> Which has been pretty good for Apple!
 
 Rolling windows:
@@ -56,5 +56,3 @@ For example: 50 day rolling mean of a 10 day Gaussian cut-off
 ```python
 daily.rolling(50, center=True, win_type='gaussian').sum(std=10)
 ```
-
-
