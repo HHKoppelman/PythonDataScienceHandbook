@@ -5,12 +5,12 @@ Decision trees are a tool for _non-parametric classification_
 > Random forests are an example of an ensemble method, meaning that it relies on aggregating the results of an ensemble of simpler estimators.   
 
 Example of steps taken by a Decision Tree Classifier
-![](Numpy%20Python%20data%20types/05.08-decision-tree-levels.png)
+![](Machine%20Learning%20Decision%20Trees/05.08-decision-tree-levels.png)
 Several steps (and a different colour scheme) further
-![](Numpy%20Python%20data%20types/unknown.png)
+![](Machine%20Learning%20Decision%20Trees/unknown.png)
 
 **NB**: if with increasing depth the trees become increasingly more complex. Perhaps even with some pathological behavior, see this example
-![](Numpy%20Python%20data%20types/unknown%202.png)
+![](Machine%20Learning%20Decision%20Trees/unknown%202.png)
 
 Decision trees are likely to overfit: that’s where bagging comes in
 > Bagging makes use of an ensemble (a grab bag, perhaps) of parallel estimators, each of which over-fits the data, and averages the results to find a better classification. An ensemble of randomized decision trees is known as a random forest.  
@@ -28,7 +28,7 @@ bag.fit(X, y)
 ```
 
 The results looks more organic but still slightly overfitted
- ![](Numpy%20Python%20data%20types/unknown%203.png)
+ ![](Machine%20Learning%20Decision%20Trees/unknown%203.png)
 
 `BaggingClassifier` docstring:
 > A Bagging classifier is an ensemble meta-estimator that fits base  
@@ -41,11 +41,11 @@ The results looks more organic but still slightly overfitted
 
 ## Random forest regression
 Not sure what the benefit is of RF regression, except for it being non-parametric.
-![](Numpy%20Python%20data%20types/unknown%204.png)
+![](Machine%20Learning%20Decision%20Trees/unknown%204.png)
 
 ## Example: Classification of Digits
 The Random Forrest Classifier is very accurate!
-![](Numpy%20Python%20data%20types/29C8A9BC-DBDE-46C4-9E77-2A687B782524.png)
+![](Machine%20Learning%20Decision%20Trees/29C8A9BC-DBDE-46C4-9E77-2A687B782524.png)
 
 ## Summary
 Ensemble estimators, such as the random forest, are very fast to train and predict.
