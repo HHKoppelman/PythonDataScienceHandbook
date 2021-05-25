@@ -16,20 +16,20 @@ Advanced pivot
 age = pd.cut(titanic['age'], [0, 18, 80])
 titanic.pivot_table('survived', ['sex', age], 'class')
 ```
-![](Pands%20Pivot%20Tables/AED2BFD4-5CCD-4CAA-B381-E49D89DC02A8.png)
+![](Pandas%20Pivot%20Tables/AED2BFD4-5CCD-4CAA-B381-E49D89DC02A8.png)
 
 Even more advanced: `pd.cut` on rows and `pd.qcut` on fare
 ```python
 fare = pd.qcut(titanic['fare'], 2)
 titanic.pivot_table('survived', ['sex', age], [fare, 'class'])
 ```
-![](Pands%20Pivot%20Tables/C3C85A70-ACBC-4A73-89D1-A3683B470EAC.png)
+![](Pandas%20Pivot%20Tables/C3C85A70-ACBC-4A73-89D1-A3683B470EAC.png)
 
 ```python
 titanic.pivot_table(index='sex', columns='class',
                     aggfunc={'survived':sum, 'fare':'mean'})
 ```
-![](Pands%20Pivot%20Tables/E79F164E-5F44-43AF-9484-CF25A6ECDE84.png)
+![](Pandas%20Pivot%20Tables/E79F164E-5F44-43AF-9484-CF25A6ECDE84.png)
 
 ```python
 titanic.pivot_table('survived', index='sex', columns='class', margins=True, margins_name='Tot')
