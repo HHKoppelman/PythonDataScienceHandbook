@@ -26,11 +26,11 @@ scores
 
 ### The learning curve
 Is a tool to test whether the model complexity is sufficient.
-![](Machine%20Learning%20Hyperparameters%20and%20Model%Validation/05.03-learning-curve.png)
+![](Machine%20Learning%20Hyperparameters%20and%20Model%20Validation/05.03-learning-curve.png)
 
 Using a learning curve to find model convergence:
 `from sklearn.learning_curve import learning_curve`
-![](Machine%20Learning%20Hyperparameters%20and%20Model%Validation/unknown.png)
+![](Machine%20Learning%20Hyperparameters%20and%20Model%20Validation/unknown.png)
 The second degree polynomial converges at a very low number of data points; clearly adding more data does not add more information! Only way to improve the 2-degree model is to use a different and more complex model!
 
 ### Grid Search
