@@ -16,25 +16,25 @@ Advanced pivot
 age = pd.cut(titanic['age'], [0, 18, 80])
 titanic.pivot_table('survived', ['sex', age], 'class')
 ```
-![](Numpy%20Python%20data%20types/AED2BFD4-5CCD-4CAA-B381-E49D89DC02A8.png)
+![](Pands%20Pivot%20Tables/AED2BFD4-5CCD-4CAA-B381-E49D89DC02A8.png)
 
 Even more advanced: `pd.cut` on rows and `pd.qcut` on fare
 ```python
 fare = pd.qcut(titanic['fare'], 2)
 titanic.pivot_table('survived', ['sex', age], [fare, 'class'])
 ```
-![](Numpy%20Python%20data%20types/C3C85A70-ACBC-4A73-89D1-A3683B470EAC.png)
+![](Pands%20Pivot%20Tables/C3C85A70-ACBC-4A73-89D1-A3683B470EAC.png)
 
 ```python
 titanic.pivot_table(index='sex', columns='class',
                     aggfunc={'survived':sum, 'fare':'mean'})
 ```
-![](Numpy%20Python%20data%20types/E79F164E-5F44-43AF-9484-CF25A6ECDE84.png)
+![](Pands%20Pivot%20Tables/E79F164E-5F44-43AF-9484-CF25A6ECDE84.png)
 
 ```python
 titanic.pivot_table('survived', index='sex', columns='class', margins=True, margins_name='Tot')
 ```
 Adds a summary row and column
 
-See [Pivot Tables | Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/03.09-pivot-tables.html) 
+See [Pivot Tables | Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/03.09-pivot-tables.html)
 For some really cool example on birth rate analysis and pandas date time operations!

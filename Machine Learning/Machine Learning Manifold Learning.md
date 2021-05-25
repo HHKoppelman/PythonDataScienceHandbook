@@ -7,16 +7,16 @@ Manifold Learning: aims to embed a high-dimensional distribution in a low-dimens
 ## Multidimensional Scaling (MDS)
 Represents a data set from its distance matrix
 Original data
-![](Numpy%20Python%20data%20types/unknown.png)
+![](Machine%20Learning%20Manifold%20Learning/unknown.png)
 MDS 2-dimensional representation of the distance matrix `D`
-![](Numpy%20Python%20data%20types/unknown%202.png)
+![](Machine%20Learning%20Manifold%20Learning/unknown%202.png)
 
 Of course the power of this kind of learning lies in representing D-dimensional data (with D>2) on a 2-dimensional manifold.
 
 Where MDS fails: non-linear data
-![](Numpy%20Python%20data%20types/unknown%203.png)
-Is represented as 
-![](Numpy%20Python%20data%20types/unknown%204.png)
+![](Machine%20Learning%20Manifold%20Learning/unknown%203.png)
+Is represented as
+![](Machine%20Learning%20Manifold%20Learning/unknown%204.png)
 
 The problem arises from the MDF trying to preserve distance _globally_.
 
@@ -24,19 +24,19 @@ The problem arises from the MDF trying to preserve distance _globally_.
 Aims to preserve distances only _locally_ which allows for embedding of non-linear manifolds.
 
 MDS vs LLE
-![](Numpy%20Python%20data%20types/05.10-LLE-vs-MDS.png)
+![](Machine%20Learning%20Manifold%20Learning/05.10-LLE-vs-MDS.png)
 
 The same S-curved hello data in LLE
-![](Numpy%20Python%20data%20types/unknown%205.png)
+![](Machine%20Learning%20Manifold%20Learning/unknown%205.png)
 Looks a lot better
 But see LLE with a different method (`ltsa` in stead of `modified`)
-![](Numpy%20Python%20data%20types/unknown%206.png)
+![](Machine%20Learning%20Manifold%20Learning/unknown%206.png)
 
 
 ## Summary
 > Though this story and motivation is compelling, in practice manifold learning techniques tend to be finicky enough that they are rarely used for anything more than simple qualitative visualization of high-dimensional data.  
 
-In contrast to PCA: 
+In contrast to PCA:
 * In manifold learning, there is no good framework for handling missing data. In contrast, there are straightforward iterative approaches for missing data in PCA.
 * In manifold learning, the presence of noise in the data can “short-circuit” the manifold and drastically change the embedding. In contrast, PCA naturally filters noise from the most important components.
 * The manifold embedding result is generally highly dependent on the number of neighbors chosen, and there is generally no solid quantitative way to choose an optimal number of neighbors. In contrast, PCA does not involve such a choice.
@@ -49,4 +49,3 @@ In contrast to PCA:
 * For toy problems such as the S-curve we saw before, locally linear embedding (LLE) and its variants (especially modified LLE), perform very well. This is implemented in `sklearn.manifold.LocallyLinearEmbedding`.
 * For high-dimensional data from real-world sources, LLE often produces poor results, and isometric mapping (IsoMap) seems to generally lead to more meaningful embeddings. This is implemented in `sklearn.manifold.Isomap`
 * For data that is highly clustered, t-distributed stochastic neighbor embedding (t-SNE) seems to work very well, though can be very slow compared to other methods. This is implemented in `sklearn.manifold.TSNE`.
-

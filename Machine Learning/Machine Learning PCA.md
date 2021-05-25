@@ -8,16 +8,16 @@ PCA finds the axis of maximum variance. It can be used as feature selection, but
 > This transformation from data axes to principal axes is an _affine transformation_, which basically means it is composed of a translation, rotation, and uniform scaling.  
 
 Example of PCA
-![](Numpy%20Python%20data%20types/unknown.png)
+![](Machine%20Learning%20PCA/unknown.png)
 
 
 ## A few examples of applying PCA to images:
 Cleaning noisy digits:
-![](Numpy%20Python%20data%20types/unknown%202.png)
-![](Numpy%20Python%20data%20types/unknown%203.png)
+![](Machine%20Learning%20PCA/unknown%202.png)
+![](Machine%20Learning%20PCA/unknown%203.png)
 
 Faces:
-![](Numpy%20Python%20data%20types/unknown%204.png)
+![](Machine%20Learning%20PCA/unknown%204.png)
 
 ## Summary
 > PCA’s main weakness is that it tends to be highly affected by outliers in the data.  

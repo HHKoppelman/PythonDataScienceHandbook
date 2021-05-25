@@ -52,7 +52,7 @@ X = vec.fit_transform(sample)
 X
 ```
 
-This might overrepresent words that appear often in documents/strings. 
+This might overrepresent words that appear often in documents/strings.
 > One approach to fix this is known as term frequency-inverse document frequency (TF–IDF) which weights the word counts by a measure of how often they appear in the documents.   
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -74,7 +74,7 @@ yfit = model.predict(X2)
 plt.scatter(x, y)
 plt.plot(x, yfit);
 ```
-![](Numpy%20Python%20data%20types/unknown.png)
+![](Machine%20Learning%20Feature%20Engineering/unknown.png)
 As we see, the resulting fit (which looks piece-wise but this is only because of the discrete input) uses linear regression to find a third order polynomial. The resulting fit remains linear in the model parameters, e.g. `y_fit = a*x + b*x^2 + c*x^3`
 
 ## Missing Features
@@ -118,9 +118,3 @@ model.fit(X, y)  # X with missing values, from above
 print(y)
 print(model.predict(X))
 ```
-
-
-
-
-
-
