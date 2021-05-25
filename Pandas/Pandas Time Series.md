@@ -4,7 +4,7 @@
 > Pandas was developed in the context of financial modeling  
 
 Numpy has implemented a `datetime` `dtype` to work with dates and times. However, since this is based on a 64 bit format there are `2^64` options and thus either the resolution or the maximum time-span is limited:
-![](Numpy%20Python%20data%20types/3E9FE27D-6690-4349-882D-2CBE8F0F45C7.png)
+![](Pandas%20Time%20Series/3E9FE27D-6690-4349-882D-2CBE8F0F45C7.png)
 
 Creating a range of dates in `pandas`
 ```python
@@ -38,11 +38,11 @@ pd.date_range('2015-07-03', periods=8, freq='H')
 
 
 Formats:
-![](Numpy%20Python%20data%20types/3DC2F363-74F0-4246-99A0-EEB0728D45F2.png)
+![](Pandas%20Time%20Series/3DC2F363-74F0-4246-99A0-EEB0728D45F2.png)
 > The monthly, quarterly, and annual frequencies are all marked at the end of the specified period. By adding an S suffix to any of these, they instead will be marked at the beginning:  
-![](Numpy%20Python%20data%20types/E2DABC91-EEAD-48E2-AF75-438DE58ABF29.png)
+![](Pandas%20Time%20Series/E2DABC91-EEAD-48E2-AF75-438DE58ABF29.png)
 > Additionally, you can change the month used to mark any quarterly or annual code by adding a three-letter month code as a suffix:  
-![](Numpy%20Python%20data%20types/F246AA74-7004-46D2-A56B-D6AFE0302AB8.png)
+![](Pandas%20Time%20Series/F246AA74-7004-46D2-A56B-D6AFE0302AB8.png)
 > In the same way, the split-point of the weekly frequency can be modified by adding a three-letter weekday code:  
 * `W-SUN`, `W-MON`, `W-TUE`, `W-WED`, etc.
 
